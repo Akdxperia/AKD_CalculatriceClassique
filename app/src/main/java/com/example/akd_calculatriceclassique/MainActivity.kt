@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var editTextNumber1: EditText
     private lateinit var editTextNumber2: EditText
+    private lateinit var editTextNumber3: EditText
     private lateinit var buttonAddition: Button
     private lateinit var textViewResult: TextView
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         // Initialisation des vues
         editTextNumber1 = findViewById(R.id.editTextNumber1)
         editTextNumber2 = findViewById(R.id.editTextNumber2)
+        editTextNumber3 = findViewById(R.id.editTextNumber3)
         buttonAddition = findViewById(R.id.buttonAddition)
         textViewResult = findViewById(R.id.textViewResult)
         val buttonSubtract = findViewById<Button>(R.id.buttonSubtract)
@@ -48,10 +50,13 @@ class MainActivity : AppCompatActivity() {
         buttonAddition.setOnClickListener {
             val number1 = editTextNumber1.text.toString().toDoubleOrNull()
             val number2 = editTextNumber2.text.toString().toDoubleOrNull()
-            textViewResult.text = if (number1 != null && number2 != null) {
-                "Résultat : ${number1 + number2}"
+            val number3 = editTextNumber3.text.toString().toDoubleOrNull()
+
+            if (number1 != null && number2 != null && number3 != null) {
+                val result = number1 + number2 + number3
+                textViewResult.text = "Résultat : $result"
             } else {
-                "Veuillez entrer des nombres valides"
+                textViewResult.text = "Veuillez entrer des nombres valides"
             }
         }
         buttonSubtract.setOnClickListener {

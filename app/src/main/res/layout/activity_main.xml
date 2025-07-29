@@ -21,16 +21,21 @@
         android:id="@+id/editTextNumber1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre 1"
+        android:hint="Saisissez un 1er Nombre"
         android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/editTextNumber2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre 2"
+        android:hint="Saisissez un 2eme Nombre (sauf pour Log, LN...)"
         android:inputType="numberDecimal" />
-
+    <EditText
+        android:id="@+id/editTextNumber3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Saisissez un 3eme Nombre si vous voulez"
+        android:inputType="numberDecimal" />
     <!-- Ligne 1 : -, +, ÷, × -->
     <LinearLayout
         android:layout_width="match_parent"
